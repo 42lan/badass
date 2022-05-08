@@ -1,0 +1,2 @@
+ip address add 20.1.1.3/24 dev eth0
+ip addr show dev eth0 | awk '{ print $2 }' | head -3 | tr '\n' ' ' | sed '$s/ $/\n/'
