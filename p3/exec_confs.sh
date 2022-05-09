@@ -10,8 +10,8 @@ then
     container_id=${container_info%:*}
     case $hostname in
       host_sucho-*|router_sucho-*)
-	filename=$hostname
-	echo $hostname + $filename
+        filename=$hostname
+        echo $hostname + $filename
         docker cp $filename $container_id:/
         docker exec $container_id ash /$filename
         ;;
