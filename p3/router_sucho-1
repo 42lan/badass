@@ -15,13 +15,13 @@ interface lo
  ip address 1.1.1.1/32
 exit
 router bgp 1
- neighbor ibgp peer-group
- neighbor ibgp remote-as 1
- neighbor ibgp update-source lo
- bgp listen range 1.1.1.0/24 peer-group ibgp
+ neighbor DYNAMIC peer-group
+ neighbor DYNAMIC remote-as 1
+ neighbor DYNAMIC update-source lo
+ bgp listen range 1.1.1.0/24 peer-group DYNAMIC
  address-family l2vpn evpn
-  neighbor ibgp activate
-  neighbor ibgp route-reflector-client
+  neighbor DYNAMIC activate
+  neighbor DYNAMIC route-reflector-client
  exit-address-family
 exit
 router ospf
