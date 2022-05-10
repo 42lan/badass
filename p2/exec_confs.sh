@@ -9,21 +9,10 @@ then
     hostname=${container_info#*:}
     container_id=${container_info%:*}
     case $hostname in
-      host_sucho-1)
-        docker cp host_sucho-1 $container_id:/
-        docker exec $container_id ash /host_sucho-1
-        ;;
-      host_sucho-2)
-        docker cp host_sucho-2 $container_id:/
-        docker exec $container_id ash /host_sucho-2
-        ;;
-      router_sucho-1)
-        docker cp router_sucho-1 $container_id:/
-        docker exec $container_id ash /router_sucho-1
-        ;;
-      router_sucho-2)
-        docker cp router_sucho-2 $container_id:/
-        docker exec $container_id ash /router_sucho-2
+      host_sucho-*|router_sucho-*)
+        filename=$hostname
+        docker cp $filename $container_id:/
+        docker exec $container_id ash /$filename
         ;;
     esac
     echo "Configuration is applied on $container_id running the $hostname"
