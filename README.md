@@ -20,6 +20,6 @@ The folders of the mandatory part will be named: p1, p2 and p3.
 # Mandatory part
 This project will consist of setting up several environments under specific rules.
 It is divided into three parts you have to do in the following order:
-- **[`Part 1`](https://github.com/42lan/badass/p1)** : GNS3 configuration with Docker.
-- **[`Part 2`](https://github.com/42lan/badass/p2)** : Discovering a VXLAN.
-- **[`Part 3`](https://github.com/42lan/badass/p3)** : Discovering BGP with EVPN.
+- **[`Part 1`](https://github.com/42lan/badass/tree/main/p1)** : GNS3 configuration with Docker.
+- **[`Part 2`](https://github.com/42lan/badass/tree/main/p2)** : Discovering a VXLAN.
+- **[`Part 3`](https://github.com/42lan/badass/tree/main/p3)** : Discovering BGP with EVPN.
